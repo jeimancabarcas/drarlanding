@@ -30,10 +30,12 @@ declare var ScrollTrigger: any;
 })
 export class HomeComponent implements AfterViewInit {
   ngAfterViewInit() {
-    // Ensure GSAP plugins are registered
+    // Ensure GSAP plugins are registered and refresh after a tick to ensure DOM layout
     if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
       gsap.registerPlugin(ScrollTrigger);
-      ScrollTrigger.refresh();
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100);
     }
   }
 }
