@@ -11,7 +11,6 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Simplificamos la URL eliminando 'opsz' y rangos complejos para evitar el error 400 en el build -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   
   <!-- GSAP Animation Library -->
@@ -29,13 +28,9 @@
     .text-primary {
       color: #2563eb;
     }
-    
-    /* Smooth scrolling */
     html {
       scroll-behavior: smooth;
     }
-    
-    /* Custom scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -59,12 +54,12 @@
     "rxjs/webSocket": "https://esm.sh/rxjs@^7.8.2/webSocket?conditions=es2015",
     "rxjs/testing": "https://esm.sh/rxjs@^7.8.2/testing?conditions=es2015",
     "rxjs/fetch": "https://esm.sh/rxjs@^7.8.2/fetch?conditions=es2015",
-    "@angular/platform-browser": "https://esm.sh/@angular/platform-browser@^21.1.0?external=rxjs",
+    "@angular/forms": "https://esm.sh/@angular/forms@^21.1.0?external=rxjs",
     "@angular/core": "https://esm.sh/@angular/core@^21.1.0?external=rxjs",
-    "@angular/compiler": "https://esm.sh/@angular/compiler@^21.1.0?external=rxjs",
-    "@angular/common": "https://esm.sh/@angular/common@^21.1.0?external=rxjs",
     "@angular/router": "https://esm.sh/@angular/router@^21.1.0?external=rxjs",
-    "@angular/forms": "https://esm.sh/@angular/forms@^21.1.0?external=rxjs"
+    "@angular/common": "https://esm.sh/@angular/common@^21.1.0?external=rxjs",
+    "@angular/platform-browser": "https://esm.sh/@angular/platform-browser@^21.1.0?external=rxjs",
+    "@angular/compiler": "https://esm.sh/@angular/compiler@^21.1.0?external=rxjs"
   }
 }
 </script>
