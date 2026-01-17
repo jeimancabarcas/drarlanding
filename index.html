@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Dr. Andres Rivera Ariza | Medicina Integral</title>
-  <base href="/">
+  <!-- Change base href to relative for GitHub Pages compatibility -->
+  <base href="./">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts -->
@@ -53,6 +54,10 @@
       width: 100vw;
       background: #fff;
       font-family: sans-serif;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
     }
     .loader {
       width: 48px;
@@ -71,12 +76,14 @@
       display: none;
       color: #ef4444;
       padding: 20px;
-      max-width: 80%;
+      max-width: 90%;
       text-align: center;
       background: #fef2f2;
       border: 1px solid #fee2e2;
       border-radius: 8px;
-      margin-bottom: 20px;
+      margin-top: 20px;
+      font-size: 14px;
+      white-space: pre-wrap;
     }
   </style>
   <script>
@@ -85,14 +92,15 @@
       console.error("Global error caught:", event.error);
       const loader = document.querySelector('.loader');
       const errorDiv = document.getElementById('error-message');
-      const loadingText = document.querySelector('.loading-container p');
+      const loadingText = document.querySelector('.loading-text');
       
       if (loader) loader.style.display = 'none';
       if (loadingText) loadingText.style.display = 'none';
       
       if (errorDiv) {
         errorDiv.style.display = 'block';
-        errorDiv.innerHTML = '<strong>Error de carga:</strong><br>' + (event.message || event.error);
+        // Show a user friendly message plus the technical error
+        errorDiv.innerHTML = '<strong>No se pudo cargar la aplicación.</strong><br>Por favor intenta recargar la página.<br><br><small>' + (event.message || event.error) + '</small>';
       }
     });
   </script>
@@ -118,8 +126,8 @@
   <app-root>
     <div class="loading-container">
       <div class="loader"></div>
+      <p class="loading-text" style="color: #94a3b8; font-size: 0.875rem; font-weight: 500;">Iniciando experiencia...</p>
       <div id="error-message"></div>
-      <p style="color: #94a3b8; font-size: 0.875rem;">Cargando experiencia...</p>
     </div>
   </app-root>
 </body>

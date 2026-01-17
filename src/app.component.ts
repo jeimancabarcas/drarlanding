@@ -20,7 +20,7 @@ declare var ScrollTrigger: any;
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <app-navbar></app-navbar>
-    <main>
+    <main class="min-h-screen">
       <router-outlet></router-outlet>
     </main>
     <app-whatsapp></app-whatsapp>
