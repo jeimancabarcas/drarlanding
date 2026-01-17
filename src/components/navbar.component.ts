@@ -1,9 +1,11 @@
 
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
+  imports: [RouterLink, RouterLinkActive],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
@@ -14,7 +16,7 @@ import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
             <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-blue-200 shadow-lg">
               AR
             </div>
-            <a href="#" class="group flex flex-col">
+            <a routerLink="/" class="group flex flex-col cursor-pointer">
               <span class="font-bold text-xl text-slate-900 leading-none group-hover:text-blue-600 transition-colors">Dr. Andres Rivera</span>
               <span class="text-[11px] font-medium tracking-wider text-slate-500 uppercase mt-1">Medicina Integral</span>
             </a>
@@ -22,13 +24,13 @@ import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 
           <!-- Desktop Menu -->
           <div class="hidden md:flex items-center space-x-1">
-            <a href="#inicio" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all">Inicio</a>
-            <a href="#sobre-mi" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all">Perfil</a>
-            <a href="#formacion" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all">Formación</a>
-            <a href="#especialidades" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all">Servicios</a>
+            <a routerLink="/" fragment="inicio" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all cursor-pointer">Inicio</a>
+            <a routerLink="/" fragment="sobre-mi" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all cursor-pointer">Perfil</a>
+            <a routerLink="/" fragment="formacion" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all cursor-pointer">Formación</a>
+            <a routerLink="/" fragment="especialidades" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all cursor-pointer">Servicios</a>
             
             <div class="pl-4">
-              <a href="#contacto" class="px-6 py-2.5 bg-blue-600 text-white text-sm font-bold rounded-full hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:shadow-blue-300 transform hover:-translate-y-0.5">
+              <a href="https://wa.me/573000000000" target="_blank" class="px-6 py-2.5 bg-blue-600 text-white text-sm font-bold rounded-full hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:shadow-blue-300 transform hover:-translate-y-0.5">
                 Agendar Cita
               </a>
             </div>
@@ -53,11 +55,11 @@ import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
       @if (isOpen()) {
         <div class="md:hidden bg-white border-b border-slate-100 absolute w-full left-0 shadow-xl">
           <div class="px-6 py-6 space-y-3 flex flex-col">
-            <a href="#inicio" (click)="closeMenu()" class="block px-4 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors">Inicio</a>
-            <a href="#sobre-mi" (click)="closeMenu()" class="block px-4 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors">Perfil</a>
-            <a href="#formacion" (click)="closeMenu()" class="block px-4 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors">Formación</a>
-            <a href="#especialidades" (click)="closeMenu()" class="block px-4 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors">Servicios</a>
-            <a href="#contacto" (click)="closeMenu()" class="block mt-4 px-4 py-3 bg-blue-600 text-white text-center font-bold rounded-xl shadow-md">
+            <a routerLink="/" fragment="inicio" (click)="closeMenu()" class="block px-4 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors cursor-pointer">Inicio</a>
+            <a routerLink="/" fragment="sobre-mi" (click)="closeMenu()" class="block px-4 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors cursor-pointer">Perfil</a>
+            <a routerLink="/" fragment="formacion" (click)="closeMenu()" class="block px-4 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors cursor-pointer">Formación</a>
+            <a routerLink="/" fragment="especialidades" (click)="closeMenu()" class="block px-4 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors cursor-pointer">Servicios</a>
+            <a href="https://wa.me/573000000000" (click)="closeMenu()" class="block mt-4 px-4 py-3 bg-blue-600 text-white text-center font-bold rounded-xl shadow-md">
               Agendar Cita
             </a>
           </div>
