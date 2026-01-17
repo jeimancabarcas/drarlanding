@@ -26,7 +26,7 @@ jobs:
 
       - name: Install Dependencies
         # npm ci es más rápido y estricto para entornos de CI
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build
         # Usamos 'npm run build' para asegurar que se usa el Angular CLI instalado localmente
@@ -37,5 +37,5 @@ jobs:
         with:
           folder: dist
           branch: gh-pages
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           clean: true
