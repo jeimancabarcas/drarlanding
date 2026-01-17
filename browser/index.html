@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>Dr. Andres Rivera Ariza | Medicina Integral</title>
-  <!-- Base href set to root. GitHub Actions will override this to ./ -->
   <base href="./">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -77,17 +76,23 @@
       background: #fef2f2;
       border: 1px solid #fee2e2;
       border-radius: 8px;
+      margin-bottom: 20px;
     }
   </style>
   <script>
     // Global error handler to catch boot errors
     window.addEventListener('error', function(event) {
+      console.error("Global error caught:", event.error);
       const loader = document.querySelector('.loader');
       const errorDiv = document.getElementById('error-message');
+      const loadingText = document.querySelector('.loading-container p');
+      
       if (loader) loader.style.display = 'none';
+      if (loadingText) loadingText.style.display = 'none';
+      
       if (errorDiv) {
         errorDiv.style.display = 'block';
-        errorDiv.innerHTML = '<strong>Error de carga:</strong><br>' + event.message;
+        errorDiv.innerHTML = '<strong>Error de carga:</strong><br>' + (event.message || event.error);
       }
     });
   </script>
