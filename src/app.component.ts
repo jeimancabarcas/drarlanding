@@ -17,12 +17,23 @@ declare var ScrollTrigger: any;
     WhatsappComponent,
     RouterOutlet
   ],
-  templateUrl: './app.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+    <app-navbar></app-navbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+    <app-whatsapp></app-whatsapp>
+    <app-footer></app-footer>
+  `
 })
 export class AppComponent implements AfterViewInit {
+  constructor() {
+    console.log('AppComponent initialized');
+  }
+
   ngAfterViewInit() {
-    if (typeof gsap !== 'undefined') {
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
       gsap.registerPlugin(ScrollTrigger);
     }
   }

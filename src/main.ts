@@ -5,6 +5,8 @@ import { provideRouter, withHashLocation, withInMemoryScrolling, withComponentIn
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 
+console.log('Starting application bootstrap...');
+
 bootstrapApplication(AppComponent, {
   providers: [
     provideZonelessChangeDetection(),
@@ -18,4 +20,9 @@ bootstrapApplication(AppComponent, {
       })
     )
   ]
-}).catch((err) => console.error(err));
+}).then(() => {
+  console.log('Application bootstrapped successfully');
+}).catch((err) => {
+  console.error('Error bootstrapping application:', err);
+  document.body.innerHTML = `<div style="color:red; padding: 20px;"><h1>Application Error</h1><pre>${err.message}</pre></div>`;
+});

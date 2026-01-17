@@ -1,6 +1,5 @@
 
 import { Component, ChangeDetectionStrategy, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 declare var gsap: any;
@@ -8,7 +7,7 @@ declare var gsap: any;
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [NgOptimizedImage, RouterLink],
+  imports: [RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section id="inicio" class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-b from-blue-50/50 to-white hero-container">
@@ -67,12 +66,11 @@ declare var gsap: any;
              
              <div class="hero-image relative rounded-[2rem] overflow-hidden shadow-2xl shadow-blue-200/50 aspect-[4/5] md:aspect-square lg:aspect-[4/5] bg-white ring-8 ring-white">
                 <img 
-                  ngSrc="https://picsum.photos/seed/blue_doctor_profile/1000/1200" 
+                  src="https://picsum.photos/seed/blue_doctor_profile/1000/1200" 
                   width="1200" 
                   height="1000" 
                   alt="Dr. Andres Rivera en Quirófano" 
                   class="object-cover w-full h-full"
-                  priority
                 />
                 
                 <!-- Floating Card -->

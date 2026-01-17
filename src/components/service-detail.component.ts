@@ -1,7 +1,7 @@
 
 import { Component, ChangeDetectionStrategy, inject, signal, effect, ElementRef, AfterViewInit, OnDestroy, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 declare var gsap: any;
 
@@ -18,7 +18,7 @@ interface ServiceData {
 @Component({
   selector: 'app-service-detail',
   standalone: true,
-  imports: [CommonModule, RouterLink, NgOptimizedImage],
+  imports: [CommonModule, RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { class: 'block' },
   template: `
