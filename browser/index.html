@@ -44,6 +44,27 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #64748b;
     }
+    /* Loading Spinner */
+    .loading-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      background: #fff;
+    }
+    .loader {
+      width: 48px;
+      height: 48px;
+      border: 5px solid #2563eb;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      animation: rotation 1s linear infinite;
+    }
+    @keyframes rotation {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   </style>
 <script type="importmap">
 {
@@ -54,17 +75,21 @@
     "rxjs/webSocket": "https://esm.sh/rxjs@^7.8.2/webSocket?conditions=es2015",
     "rxjs/testing": "https://esm.sh/rxjs@^7.8.2/testing?conditions=es2015",
     "rxjs/fetch": "https://esm.sh/rxjs@^7.8.2/fetch?conditions=es2015",
-    "@angular/forms": "https://esm.sh/@angular/forms@^21.1.0?external=rxjs",
+    "@angular/compiler": "https://esm.sh/@angular/compiler@^21.1.0?external=rxjs",
+    "@angular/platform-browser": "https://esm.sh/@angular/platform-browser@^21.1.0?external=rxjs",
     "@angular/core": "https://esm.sh/@angular/core@^21.1.0?external=rxjs",
     "@angular/router": "https://esm.sh/@angular/router@^21.1.0?external=rxjs",
     "@angular/common": "https://esm.sh/@angular/common@^21.1.0?external=rxjs",
-    "@angular/platform-browser": "https://esm.sh/@angular/platform-browser@^21.1.0?external=rxjs",
-    "@angular/compiler": "https://esm.sh/@angular/compiler@^21.1.0?external=rxjs"
+    "@angular/forms": "https://esm.sh/@angular/forms@^21.1.0?external=rxjs"
   }
 }
 </script>
 </head>
 <body class="bg-white text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900">
-  <app-root></app-root>
-<script src="main-KCHKUQ2K.js" type="module"></script></body>
+  <app-root>
+    <div class="loading-container">
+      <div class="loader"></div>
+    </div>
+  </app-root>
+<script src="main-E5OHAP33.js" type="module"></script></body>
 </html>
