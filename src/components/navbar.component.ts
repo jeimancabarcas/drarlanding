@@ -28,6 +28,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
             <a routerLink="/" fragment="sobre-mi" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all cursor-pointer">Perfil</a>
             <a routerLink="/" fragment="formacion" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all cursor-pointer">Formación</a>
             <a routerLink="/" fragment="especialidades" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all cursor-pointer">Servicios</a>
+            <a routerLink="/" fragment="contacto" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all cursor-pointer">Contacto</a>
             
             <div class="pl-4">
               <a href="https://wa.me/573000000000" target="_blank" class="px-6 py-2.5 bg-blue-600 text-white text-sm font-bold rounded-full hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:shadow-blue-300 transform hover:-translate-y-0.5">
@@ -59,6 +60,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
             <a routerLink="/" fragment="sobre-mi" (click)="closeMenu()" class="block px-4 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors cursor-pointer">Perfil</a>
             <a routerLink="/" fragment="formacion" (click)="closeMenu()" class="block px-4 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors cursor-pointer">Formación</a>
             <a routerLink="/" fragment="especialidades" (click)="closeMenu()" class="block px-4 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors cursor-pointer">Servicios</a>
+            <a routerLink="/" fragment="contacto" (click)="closeMenu()" class="block px-4 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors cursor-pointer">Contacto</a>
             <a href="https://wa.me/573000000000" (click)="closeMenu()" class="block mt-4 px-4 py-3 bg-blue-600 text-white text-center font-bold rounded-xl shadow-md">
               Agendar Cita
             </a>

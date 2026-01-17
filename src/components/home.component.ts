@@ -5,6 +5,7 @@ import { AboutComponent } from './about.component';
 import { CertificationsComponent } from './certifications.component';
 import { SpecialtiesComponent } from './specialties.component';
 import { MembershipsComponent } from './memberships.component';
+import { ContactComponent } from './contact.component';
 
 declare var gsap: any;
 declare var ScrollTrigger: any;
@@ -17,7 +18,8 @@ declare var ScrollTrigger: any;
     AboutComponent,
     CertificationsComponent,
     SpecialtiesComponent,
-    MembershipsComponent
+    MembershipsComponent,
+    ContactComponent
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
@@ -26,6 +28,7 @@ declare var ScrollTrigger: any;
     <app-certifications></app-certifications>
     <app-specialties></app-specialties>
     <app-memberships></app-memberships>
+    <app-contact></app-contact>
   `
 })
 export class HomeComponent implements AfterViewInit {

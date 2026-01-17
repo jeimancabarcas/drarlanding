@@ -1,13 +1,14 @@
 
 import { Component, ChangeDetectionStrategy, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 declare var gsap: any;
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section id="inicio" class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-b from-blue-50/50 to-white hero-container">
@@ -38,10 +39,10 @@ declare var gsap: any;
             </p>
             
             <div class="hero-text-block flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
-              <a href="#contacto" class="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-200 hover:shadow-2xl hover:-translate-y-1 transform active:scale-95">
+              <a routerLink="/" fragment="especialidades" class="cursor-pointer px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-200 hover:shadow-2xl hover:-translate-y-1 transform active:scale-95 text-center">
                 Iniciar Transformación
               </a>
-              <a href="#sobre-mi" class="px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-2xl font-bold hover:border-blue-300 hover:text-blue-600 transition-all shadow-sm hover:shadow-md transform active:scale-95">
+              <a routerLink="/" fragment="sobre-mi" class="cursor-pointer px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-2xl font-bold hover:border-blue-300 hover:text-blue-600 transition-all shadow-sm hover:shadow-md transform active:scale-95 text-center">
                 Conocer al Doctor
               </a>
             </div>

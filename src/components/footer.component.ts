@@ -6,7 +6,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <footer id="contacto" class="bg-white border-t border-slate-100 pt-16 pb-8">
+    <footer class="bg-white border-t border-slate-100 pt-16 pb-8">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
@@ -39,7 +39,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
               <li><a href="#inicio" class="hover:text-blue-600 transition-colors">Inicio</a></li>
               <li><a href="#sobre-mi" class="hover:text-blue-600 transition-colors">Perfil Profesional</a></li>
               <li><a href="#especialidades" class="hover:text-blue-600 transition-colors">Servicios Médicos</a></li>
-              <li><a href="#afiliaciones" class="hover:text-blue-600 transition-colors">Afiliaciones</a></li>
+              <li><a href="#contacto" class="hover:text-blue-600 transition-colors">Contacto</a></li>
             </ul>
           </div>
 
