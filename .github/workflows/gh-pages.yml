@@ -22,14 +22,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          # Hemos quitado la línea de 'cache: npm' porque causaba el error al no encontrar el lockfile
+          # Cache desactivado para evitar errores si falta package-lock.json
 
       - name: Install Dependencies
-        # Cambiamos 'npm ci' por 'npm install' porque 'ci' exige obligatoriamente el package-lock.json
-        run: npm install
+        # Agregamos --legacy-peer-deps para ignorar el error ERESOLVE y forzar la instalación
+        # a pesar de los conflictos de versiones de dependencias pares.
+        run: npm install --legacy-peer-deps
 
       - name: Build
-        # Esto compila Angular y ajusta las rutas para que funcionen en GitHub Pages
+        # Compila el proyecto Angular para producción
         run: npx ng build --configuration production --base-href ./ --output-path=dist
 
       - name: Deploy
