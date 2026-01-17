@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Dr. Andres Rivera Ariza | Medicina Integral</title>
-  <!-- Base href set to root for local development. GitHub Actions will override this to ./ -->
+  <!-- Base href set to root. GitHub Actions will override this to ./ -->
   <base href="./">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -47,11 +47,13 @@
     /* Loading Spinner */
     .loading-container {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
       width: 100vw;
       background: #fff;
+      font-family: sans-serif;
     }
     .loader {
       width: 48px;
@@ -60,12 +62,35 @@
       border-bottom-color: transparent;
       border-radius: 50%;
       animation: rotation 1s linear infinite;
+      margin-bottom: 20px;
     }
     @keyframes rotation {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+    #error-message {
+      display: none;
+      color: #ef4444;
+      padding: 20px;
+      max-width: 80%;
+      text-align: center;
+      background: #fef2f2;
+      border: 1px solid #fee2e2;
+      border-radius: 8px;
+    }
   </style>
+  <script>
+    // Global error handler to catch boot errors
+    window.addEventListener('error', function(event) {
+      const loader = document.querySelector('.loader');
+      const errorDiv = document.getElementById('error-message');
+      if (loader) loader.style.display = 'none';
+      if (errorDiv) {
+        errorDiv.style.display = 'block';
+        errorDiv.innerHTML = '<strong>Error de carga:</strong><br>' + event.message;
+      }
+    });
+  </script>
 <script type="importmap">
 {
   "imports": {
@@ -75,12 +100,11 @@
     "rxjs/webSocket": "https://esm.sh/rxjs@^7.8.2/webSocket?conditions=es2015",
     "rxjs/testing": "https://esm.sh/rxjs@^7.8.2/testing?conditions=es2015",
     "rxjs/fetch": "https://esm.sh/rxjs@^7.8.2/fetch?conditions=es2015",
-    "@angular/compiler": "https://esm.sh/@angular/compiler@^21.1.0?external=rxjs",
-    "@angular/platform-browser": "https://esm.sh/@angular/platform-browser@^21.1.0?external=rxjs",
     "@angular/core": "https://esm.sh/@angular/core@^21.1.0?external=rxjs",
     "@angular/router": "https://esm.sh/@angular/router@^21.1.0?external=rxjs",
     "@angular/common": "https://esm.sh/@angular/common@^21.1.0?external=rxjs",
-    "@angular/forms": "https://esm.sh/@angular/forms@^21.1.0?external=rxjs"
+    "@angular/forms": "https://esm.sh/@angular/forms@^21.1.0?external=rxjs",
+    "@angular/platform-browser": "https://esm.sh/@angular/platform-browser@^21.1.0?external=rxjs"
   }
 }
 </script>
@@ -89,7 +113,9 @@
   <app-root>
     <div class="loading-container">
       <div class="loader"></div>
+      <div id="error-message"></div>
+      <p style="color: #94a3b8; font-size: 0.875rem;">Cargando experiencia...</p>
     </div>
   </app-root>
-<script src="main-E5OHAP33.js" type="module"></script></body>
+<script src="main-VDKGJX37.js" type="module"></script></body>
 </html>
