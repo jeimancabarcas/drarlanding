@@ -22,14 +22,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          # Cache eliminado explícitamente para evitar error "lock file not found"
 
       - name: Install Dependencies
-        # npm ci es más rápido y estricto para entornos de CI
+        # Usamos legacy-peer-deps para mayor compatibilidad
         run: npm install --legacy-peer-deps
 
       - name: Build
-        # Usamos 'npm run build' para asegurar que se usa el Angular CLI instalado localmente
         run: npm run build -- --configuration production --base-href ./ --output-path=dist
 
       - name: Deploy
