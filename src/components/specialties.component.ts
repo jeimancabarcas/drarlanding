@@ -121,11 +121,15 @@ export class SpecialtiesComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     this.ctx = gsap.context(() => {
       // Re-trigger ScrollTrigger logic since we might be coming back from a route
-      ScrollTrigger.refresh();
+      if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
 
       // Title Animation
       gsap.from('.title-anim', {
-        scrollTrigger: { trigger: '.title-anim', start: 'top 85%' },
+        scrollTrigger: { 
+            trigger: '.title-anim', 
+            start: 'top bottom-=100', // Trigger earlier
+            toggleActions: 'play none none reverse'
+        },
         y: 30,
         opacity: 0,
         duration: 0.8,
@@ -136,7 +140,8 @@ export class SpecialtiesComponent implements AfterViewInit, OnDestroy {
       gsap.from('.service-card', {
         scrollTrigger: { 
           trigger: '.services-grid', 
-          start: 'top 75%' 
+          start: 'top bottom-=50', // Trigger earlier to ensure visibility
+          toggleActions: 'play none none reverse'
         },
         y: 40,
         opacity: 0,

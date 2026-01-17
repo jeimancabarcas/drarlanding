@@ -30,8 +30,9 @@ declare var ScrollTrigger: any;
 })
 export class HomeComponent implements AfterViewInit {
   ngAfterViewInit() {
-    // Re-refresh ScrollTrigger when view is loaded to ensure positions are correct
-    if (typeof ScrollTrigger !== 'undefined') {
+    // Ensure GSAP plugins are registered
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
       ScrollTrigger.refresh();
     }
   }

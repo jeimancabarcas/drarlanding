@@ -62,18 +62,27 @@ export class CertificationsComponent implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     this.ctx = gsap.context(() => {
-      // Header Animation
+      // Use 'top bottom' (when top of element hits bottom of viewport) to trigger earlier
+      // This prevents elements from staying hidden if they are just slightly off screen or if calculations are tight
+      
       gsap.from('.header-anim', {
-        scrollTrigger: { trigger: '.header-anim', start: 'top 85%' },
-        y: -30,
+        scrollTrigger: { 
+            trigger: '.header-anim', 
+            start: 'top bottom-=100', // Trigger when header enters viewport
+            toggleActions: 'play none none reverse'
+        },
+        y: 30,
         opacity: 0,
         duration: 0.8,
         ease: 'power2.out'
       });
 
-      // Cards Stagger
       gsap.from('.cert-card', {
-        scrollTrigger: { trigger: '.cert-grid', start: 'top 80%' },
+        scrollTrigger: { 
+            trigger: '.cert-grid', 
+            start: 'top bottom-=50', // Trigger earlier
+            toggleActions: 'play none none reverse'
+        },
         y: 40,
         opacity: 0,
         duration: 0.8,

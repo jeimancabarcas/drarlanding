@@ -50,7 +50,11 @@ export class MembershipsComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     this.ctx = gsap.context(() => {
       gsap.from('.member-header', {
-        scrollTrigger: { trigger: '.member-header', start: 'top 80%' },
+        scrollTrigger: { 
+            trigger: '.member-header', 
+            start: 'top bottom-=100', // Trigger earlier
+            toggleActions: 'play none none reverse'
+        },
         opacity: 0,
         scale: 0.9,
         duration: 0.8,
@@ -58,7 +62,11 @@ export class MembershipsComponent implements AfterViewInit, OnDestroy {
       });
 
       gsap.from('.member-card', {
-        scrollTrigger: { trigger: '.member-grid', start: 'top 80%' },
+        scrollTrigger: { 
+            trigger: '.member-grid', 
+            start: 'top bottom-=50', // Trigger earlier
+            toggleActions: 'play none none reverse'
+        },
         opacity: 0,
         y: 40,
         duration: 0.8,
