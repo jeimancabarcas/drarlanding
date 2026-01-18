@@ -1,7 +1,1 @@
-.footer {
-  background: var(--text-dark);
-  color: white;
-  text-align: center;
-  padding: 2rem;
-  opacity: 0;
-}
+/* Estilos mínimos - Tailwind maneja la mayoría */

@@ -1,19 +1,69 @@
-<section id="inicio" class="hero">
-  <div class="hero-content">
-    <h1 class="hero-title">
-      <span class="title-line">Dr. Andrés</span>
-      <span class="title-line">Rivera Ariza</span>
+<section id="inicio" class="min-h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8 pt-24 pb-16 overflow-hidden bg-gradient-to-br from-gray-50 to-blue-100">
+  <div class="max-w-4xl text-center z-10 relative">
+    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-gray-900">
+      <span class="title-line block">Dr. Andrés</span>
+      <span class="title-line block">Rivera Ariza</span>
     </h1>
-    <p class="hero-subtitle">Cirugía Plástica Estética y Reconstructiva</p>
-    <p class="hero-description">Médico especializado con experiencia internacional en cirugía plástica, estética y reconstructiva</p>
-    <div class="hero-buttons">
-      <a href="#contacto" class="btn btn-primary">Agendar Cita</a>
-      <a href="#sobre" class="btn btn-secondary">Conocer Más</a>
+    <p class="hero-subtitle text-2xl sm:text-3xl lg:text-4xl text-primary font-semibold mb-4">Cirugía Plástica Estética y Reconstructiva</p>
+    <p class="hero-description text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Médico especializado con experiencia internacional en cirugía plástica, estética y reconstructiva</p>
+    <div class="hero-buttons flex gap-4 justify-center flex-wrap">
+      <a href="#contacto" class="btn-primary px-8 py-4 rounded-full font-semibold text-white no-underline inline-block transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">Agendar Cita</a>
+      <a href="#sobre" class="btn-secondary px-8 py-4 rounded-full font-semibold text-primary no-underline inline-block transition-all duration-300 border-2 border-primary hover:bg-primary hover:text-white hover:-translate-y-1">Conocer Más</a>
     </div>
   </div>
-  <div class="hero-decoration">
-    <div class="decoration-circle circle-1"></div>
-    <div class="decoration-circle circle-2"></div>
-    <div class="decoration-circle circle-3"></div>
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="decoration-circle circle-1 absolute w-72 h-72 top-[10%] right-[10%] rounded-full opacity-10 bg-gradient-to-br from-purple-400 to-pink-400 animate-float"></div>
+    <div class="decoration-circle circle-2 absolute w-48 h-48 bottom-[20%] left-[15%] rounded-full opacity-10 bg-gradient-to-br from-blue-400 to-purple-400 animate-float-reverse"></div>
+    <div class="decoration-circle circle-3 absolute w-36 h-36 top-1/2 left-[5%] rounded-full opacity-10 bg-gradient-to-br from-pink-400 to-red-400 animate-float-slow"></div>
   </div>
 </section>
+
+<style>
+  .btn-primary {
+    background: var(--gradient-1);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  }
+
+  .btn-secondary {
+    background: white;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-20px) translateX(10px);
+    }
+  }
+
+  @keyframes float-reverse {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(20px) translateX(-10px);
+    }
+  }
+
+  @keyframes float-slow {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-15px) translateX(5px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-reverse {
+    animation: float-reverse 8s ease-in-out infinite;
+  }
+
+  .animate-float-slow {
+    animation: float-slow 7s ease-in-out infinite;
+  }
+</style>

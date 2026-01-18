@@ -26,13 +26,15 @@ export class MembershipsComponent implements AfterViewInit {
   constructor(private animationService: AnimationService) {}
 
   ngAfterViewInit(): void {
-    this.animationService.animateOnScroll('.section-title', {
-      start: 'top 80%',
-      opacity: 0,
-      y: 50,
-      duration: 1
-    });
+    setTimeout(() => {
+      this.animationService.animateOnScroll('#membresias .section-title', {
+        start: 'top 80%',
+        opacity: 0,
+        y: 50,
+        duration: 1
+      });
 
-    this.animationService.elasticIn('.membership-card', 0);
+      this.animationService.elasticIn('#membresias .membership-card', 0);
+    }, 200);
   }
 }

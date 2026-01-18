@@ -36,14 +36,16 @@ export class SpecialtiesComponent implements AfterViewInit {
   constructor(private animationService: AnimationService) {}
 
   ngAfterViewInit(): void {
-    this.animationService.animateOnScroll('.section-title', {
-      start: 'top 80%',
-      opacity: 0,
-      y: 50,
-      duration: 1
-    });
+    setTimeout(() => {
+      this.animationService.animateOnScroll('#especialidades .section-title', {
+        start: 'top 80%',
+        opacity: 0,
+        y: 50,
+        duration: 1
+      });
 
-    this.animationService.scaleIn('.specialty-card', 0);
-    this.animationService.setupHoverEffect('.specialty-card');
+      this.animationService.scaleIn('#especialidades .specialty-card', 0);
+      this.animationService.setupHoverEffect('#especialidades .specialty-card');
+    }, 200);
   }
 }

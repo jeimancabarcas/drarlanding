@@ -13,14 +13,16 @@ export class AboutComponent implements AfterViewInit {
   constructor(private animationService: AnimationService) {}
 
   ngAfterViewInit(): void {
-    this.animationService.animateOnScroll('.section-title', {
-      start: 'top 80%',
-      opacity: 0,
-      y: 50,
-      duration: 1
-    });
+    setTimeout(() => {
+      this.animationService.animateOnScroll('#sobre .section-title', {
+        start: 'top 80%',
+        opacity: 0,
+        y: 50,
+        duration: 1
+      });
 
-    this.animationService.fadeInLeft('.about-text p', 0);
-    this.animationService.fadeInUp('.highlight-item', 0);
+      this.animationService.fadeInLeft('#sobre .about-text p', 0);
+      this.animationService.fadeInUp('#sobre .highlight-item', 0);
+    }, 200);
   }
 }

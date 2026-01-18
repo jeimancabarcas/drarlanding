@@ -13,6 +13,8 @@ export class FooterComponent implements AfterViewInit {
   constructor(private animationService: AnimationService) {}
 
   ngAfterViewInit(): void {
-    this.animationService.fadeInUp('.footer', 0);
+    setTimeout(() => {
+      this.animationService.fadeInUp('.footer', 0);
+    }, 200);
   }
 }

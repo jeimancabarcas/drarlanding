@@ -1,12 +1,12 @@
-<section id="especialidades" class="specialties">
-  <div class="container">
-    <h2 class="section-title">Especialidades</h2>
-    <div class="specialties-grid">
+<section id="especialidades" class="bg-gray-50 py-16 sm:py-24 scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="section-title text-4xl sm:text-5xl font-extrabold text-center mb-12 sm:mb-16 gradient-text">Especialidades</h2>
+    <div class="specialties-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
       @for (specialty of specialties; track specialty.title) {
-        <div class="specialty-card">
-          <div class="specialty-icon">{{ specialty.icon }}</div>
-          <h3>{{ specialty.title }}</h3>
-          <p>{{ specialty.description }}</p>
+        <div class="specialty-card bg-white p-8 rounded-3xl text-center transition-all duration-300 shadow-sm hover:-translate-y-3 hover:shadow-xl">
+          <div class="text-5xl mb-6">{{ specialty.icon }}</div>
+          <h3 class="text-xl font-bold mb-4 text-gray-900">{{ specialty.title }}</h3>
+          <p class="text-gray-600 leading-relaxed">{{ specialty.description }}</p>
         </div>
       }
     </div>

@@ -21,17 +21,19 @@ export class ContactComponent implements AfterViewInit {
   constructor(private animationService: AnimationService) {}
 
   ngAfterViewInit(): void {
-    this.animationService.animateOnScroll('.section-title', {
-      start: 'top 80%',
-      opacity: 0,
-      y: 50,
-      duration: 1
-    });
+    setTimeout(() => {
+      this.animationService.animateOnScroll('#contacto .section-title', {
+        start: 'top 80%',
+        opacity: 0,
+        y: 50,
+        duration: 1
+      });
 
-    this.animationService.fadeInLeft('.contact-info h3', 0);
-    this.animationService.fadeInLeft('.contact-info > p', 0.2);
-    this.animationService.fadeInLeft('.contact-item', 0);
-    this.animationService.fadeInRight('.contact-form-wrapper', 0);
+      this.animationService.fadeInLeft('#contacto .contact-info h3', 0);
+      this.animationService.fadeInLeft('#contacto .contact-info > p', 0.2);
+      this.animationService.fadeInLeft('#contacto .contact-item', 0);
+      this.animationService.fadeInRight('#contacto .contact-form-wrapper', 0);
+    }, 200);
   }
 
   onSubmit(event: Event): void {

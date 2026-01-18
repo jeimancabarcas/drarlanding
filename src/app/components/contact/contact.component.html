@@ -1,32 +1,32 @@
-<section id="contacto" class="contact">
-  <div class="container">
-    <h2 class="section-title">Contacto</h2>
-    <div class="contact-content">
+<section id="contacto" class="bg-gray-50 py-16 sm:py-24 scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="section-title text-4xl sm:text-5xl font-extrabold text-center mb-12 sm:mb-16 gradient-text">Contacto</h2>
+    <div class="contact-content grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
       <div class="contact-info">
-        <h3>Agenda tu Consulta</h3>
-        <p>Estoy aquí para ayudarte en tu camino hacia la confianza y el bienestar. Contáctame para más información sobre mis servicios.</p>
-        <div class="contact-details">
-          <div class="contact-item">
-            <span class="contact-icon">📧</span>
-            <span>Email: contacto@drarivera.com</span>
+        <h3 class="text-3xl font-bold mb-6 text-gray-900">Agenda tu Consulta</h3>
+        <p class="text-gray-600 mb-8 text-lg leading-relaxed">Estoy aquí para ayudarte en tu camino hacia la confianza y el bienestar. Contáctame para más información sobre mis servicios.</p>
+        <div class="contact-details flex flex-col gap-4">
+          <div class="contact-item flex items-center gap-4 p-4 bg-white rounded-xl">
+            <span class="text-2xl">📧</span>
+            <span class="text-gray-700">Email: contacto@drarivera.com</span>
           </div>
-          <div class="contact-item">
-            <span class="contact-icon">📱</span>
-            <span>Teléfono: +57 XXX XXX XXXX</span>
+          <div class="contact-item flex items-center gap-4 p-4 bg-white rounded-xl">
+            <span class="text-2xl">📱</span>
+            <span class="text-gray-700">Teléfono: +57 XXX XXX XXXX</span>
           </div>
-          <div class="contact-item">
-            <span class="contact-icon">📍</span>
-            <span>Cartagena, Colombia</span>
+          <div class="contact-item flex items-center gap-4 p-4 bg-white rounded-xl">
+            <span class="text-2xl">📍</span>
+            <span class="text-gray-700">Cartagena, Colombia</span>
           </div>
         </div>
       </div>
       <div class="contact-form-wrapper">
-        <form class="contact-form" (ngSubmit)="onSubmit($event)">
+        <form class="contact-form flex flex-col gap-6" (ngSubmit)="onSubmit($event)">
           <div class="form-group">
             <input 
               type="text" 
               placeholder="Nombre completo" 
-              class="form-input" 
+              class="form-input w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-base font-sans transition-all duration-300 bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10" 
               [(ngModel)]="contactForm.name"
               name="name"
               required>
@@ -35,7 +35,7 @@
             <input 
               type="email" 
               placeholder="Email" 
-              class="form-input" 
+              class="form-input w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-base font-sans transition-all duration-300 bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10" 
               [(ngModel)]="contactForm.email"
               name="email"
               required>
@@ -44,7 +44,7 @@
             <input 
               type="tel" 
               placeholder="Teléfono" 
-              class="form-input" 
+              class="form-input w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-base font-sans transition-all duration-300 bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10" 
               [(ngModel)]="contactForm.phone"
               name="phone"
               required>
@@ -52,15 +52,22 @@
           <div class="form-group">
             <textarea 
               placeholder="Mensaje" 
-              class="form-input form-textarea" 
+              class="form-input form-textarea w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-base font-sans transition-all duration-300 bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 resize-y min-h-[120px]" 
               rows="5"
               [(ngModel)]="contactForm.message"
               name="message"
               required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-full">Enviar Mensaje</button>
+          <button type="submit" class="btn-primary w-full px-8 py-4 rounded-full font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">Enviar Mensaje</button>
         </form>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .btn-primary {
+    background: var(--gradient-1);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  }
+</style>
