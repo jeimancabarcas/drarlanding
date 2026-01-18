@@ -1,0 +1,14 @@
+<section id="membresias" class="memberships">
+  <div class="container">
+    <h2 class="section-title">Membresías y Certificaciones</h2>
+    <div class="memberships-grid">
+      @for (membership of memberships; track membership.title) {
+        <div class="membership-card">
+          <div class="membership-badge">{{ membership.badge }}</div>
+          <h3>{{ membership.title }}</h3>
+          <p>{{ membership.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

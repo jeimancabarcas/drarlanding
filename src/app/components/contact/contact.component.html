@@ -1,0 +1,66 @@
+<section id="contacto" class="contact">
+  <div class="container">
+    <h2 class="section-title">Contacto</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <h3>Agenda tu Consulta</h3>
+        <p>Estoy aquí para ayudarte en tu camino hacia la confianza y el bienestar. Contáctame para más información sobre mis servicios.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <span>Email: contacto@drarivera.com</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📱</span>
+            <span>Teléfono: +57 XXX XXX XXXX</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <span>Cartagena, Colombia</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrapper">
+        <form class="contact-form" (ngSubmit)="onSubmit($event)">
+          <div class="form-group">
+            <input 
+              type="text" 
+              placeholder="Nombre completo" 
+              class="form-input" 
+              [(ngModel)]="contactForm.name"
+              name="name"
+              required>
+          </div>
+          <div class="form-group">
+            <input 
+              type="email" 
+              placeholder="Email" 
+              class="form-input" 
+              [(ngModel)]="contactForm.email"
+              name="email"
+              required>
+          </div>
+          <div class="form-group">
+            <input 
+              type="tel" 
+              placeholder="Teléfono" 
+              class="form-input" 
+              [(ngModel)]="contactForm.phone"
+              name="phone"
+              required>
+          </div>
+          <div class="form-group">
+            <textarea 
+              placeholder="Mensaje" 
+              class="form-input form-textarea" 
+              rows="5"
+              [(ngModel)]="contactForm.message"
+              name="message"
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Enviar Mensaje</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

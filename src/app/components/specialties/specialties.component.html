@@ -1,0 +1,14 @@
+<section id="especialidades" class="specialties">
+  <div class="container">
+    <h2 class="section-title">Especialidades</h2>
+    <div class="specialties-grid">
+      @for (specialty of specialties; track specialty.title) {
+        <div class="specialty-card">
+          <div class="specialty-icon">{{ specialty.icon }}</div>
+          <h3>{{ specialty.title }}</h3>
+          <p>{{ specialty.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
