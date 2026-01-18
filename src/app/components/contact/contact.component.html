@@ -1,65 +1,113 @@
-<section id="contacto" class="bg-gray-50 py-16 sm:py-24 scroll-mt-20">
+<section id="contacto" class="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-24 scroll-mt-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="section-title text-4xl sm:text-5xl font-extrabold text-center mb-12 sm:mb-16 gradient-text">Contacto</h2>
+    <div class="text-center mb-12">
+      <h2 class="section-title text-4xl sm:text-5xl font-extrabold mb-4 gradient-text">Contacto</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">Estoy aquí para ayudarte. Agenda tu consulta y comienza tu transformación hoy</p>
+    </div>
+    
     <div class="contact-content grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
       <div class="contact-info">
-        <h3 class="text-3xl font-bold mb-6 text-gray-900">Agenda tu Consulta</h3>
-        <p class="text-gray-600 mb-8 text-lg leading-relaxed">Estoy aquí para ayudarte en tu camino hacia la confianza y el bienestar. Contáctame para más información sobre mis servicios.</p>
-        <div class="contact-details flex flex-col gap-4">
-          <div class="contact-item flex items-center gap-4 p-4 bg-white rounded-xl">
-            <span class="text-2xl">📧</span>
-            <span class="text-gray-700">Email: contacto@drarivera.com</span>
+        <div class="bg-gradient-to-br from-primary/10 to-purple-500/10 rounded-3xl p-8 mb-8">
+          <h3 class="text-3xl font-bold mb-6 text-gray-900">Agenda tu Consulta</h3>
+          <p class="text-gray-700 mb-8 text-lg leading-relaxed">Estoy aquí para ayudarte en tu camino hacia la confianza y el bienestar. Contáctame para más información sobre mis servicios y cómo puedo ayudarte a alcanzar tus objetivos.</p>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
+              <div class="bg-primary/10 p-3 rounded-xl">
+                <span class="text-2xl">📧</span>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">Email</div>
+                <div class="text-gray-600 text-sm">contacto@drarivera.com</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
+              <div class="bg-primary/10 p-3 rounded-xl">
+                <span class="text-2xl">📱</span>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">Teléfono</div>
+                <div class="text-gray-600 text-sm">+57 XXX XXX XXXX</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
+              <div class="bg-primary/10 p-3 rounded-xl">
+                <span class="text-2xl">📍</span>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">Ubicación</div>
+                <div class="text-gray-600 text-sm">Cartagena, Colombia</div>
+              </div>
+            </div>
           </div>
-          <div class="contact-item flex items-center gap-4 p-4 bg-white rounded-xl">
-            <span class="text-2xl">📱</span>
-            <span class="text-gray-700">Teléfono: +57 XXX XXX XXXX</span>
-          </div>
-          <div class="contact-item flex items-center gap-4 p-4 bg-white rounded-xl">
-            <span class="text-2xl">📍</span>
-            <span class="text-gray-700">Cartagena, Colombia</span>
+
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <h4 class="font-bold text-gray-900 mb-4">Horarios de Atención</h4>
+            <div class="space-y-2 text-sm text-gray-700">
+              <div class="flex justify-between">
+                <span>Lunes - Viernes</span>
+                <span class="font-semibold">9:00 AM - 6:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Sábados</span>
+                <span class="font-semibold">9:00 AM - 2:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Domingos</span>
+                <span class="font-semibold text-gray-400">Cerrado</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      
       <div class="contact-form-wrapper">
-        <form class="contact-form flex flex-col gap-6" (ngSubmit)="onSubmit($event)">
-          <div class="form-group">
-            <input 
-              type="text" 
-              placeholder="Nombre completo" 
-              class="form-input w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-base font-sans transition-all duration-300 bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10" 
-              [(ngModel)]="contactForm.name"
-              name="name"
-              required>
-          </div>
-          <div class="form-group">
-            <input 
-              type="email" 
-              placeholder="Email" 
-              class="form-input w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-base font-sans transition-all duration-300 bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10" 
-              [(ngModel)]="contactForm.email"
-              name="email"
-              required>
-          </div>
-          <div class="form-group">
-            <input 
-              type="tel" 
-              placeholder="Teléfono" 
-              class="form-input w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-base font-sans transition-all duration-300 bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10" 
-              [(ngModel)]="contactForm.phone"
-              name="phone"
-              required>
-          </div>
-          <div class="form-group">
-            <textarea 
-              placeholder="Mensaje" 
-              class="form-input form-textarea w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-base font-sans transition-all duration-300 bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 resize-y min-h-[120px]" 
-              rows="5"
-              [(ngModel)]="contactForm.message"
-              name="message"
-              required></textarea>
-          </div>
-          <button type="submit" class="btn-primary w-full px-8 py-4 rounded-full font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">Enviar Mensaje</button>
-        </form>
+        <div class="bg-white rounded-3xl shadow-xl p-8">
+          <h3 class="text-2xl font-bold mb-6 text-gray-900">Envíanos un Mensaje</h3>
+          <form class="contact-form flex flex-col gap-6" (ngSubmit)="onSubmit($event)">
+            <div class="form-group">
+              <label class="block text-sm font-medium text-gray-700 mb-2">Nombre completo</label>
+              <input 
+                type="text" 
+                placeholder="Tu nombre" 
+                class="form-input w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-base font-sans transition-all duration-300 bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10" 
+                [(ngModel)]="contactForm.name"
+                name="name"
+                required>
+            </div>
+            <div class="form-group">
+              <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+              <input 
+                type="email" 
+                placeholder="tu@email.com" 
+                class="form-input w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-base font-sans transition-all duration-300 bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10" 
+                [(ngModel)]="contactForm.email"
+                name="email"
+                required>
+            </div>
+            <div class="form-group">
+              <label class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
+              <input 
+                type="tel" 
+                placeholder="+57 XXX XXX XXXX" 
+                class="form-input w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-base font-sans transition-all duration-300 bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10" 
+                [(ngModel)]="contactForm.phone"
+                name="phone"
+                required>
+            </div>
+            <div class="form-group">
+              <label class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label>
+              <textarea 
+                placeholder="Cuéntame sobre tu consulta..." 
+                class="form-input form-textarea w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-base font-sans transition-all duration-300 bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 resize-y min-h-[120px]" 
+                rows="5"
+                [(ngModel)]="contactForm.message"
+                name="message"
+                required></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full px-8 py-4 rounded-full font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">Enviar Mensaje</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>

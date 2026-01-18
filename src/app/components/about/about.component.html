@@ -1,37 +1,119 @@
 <section id="sobre" class="bg-white py-16 sm:py-24 scroll-mt-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="section-title text-4xl sm:text-5xl font-extrabold text-center mb-12 sm:mb-16 gradient-text">Sobre Mí</h2>
-    <div class="max-w-4xl mx-auto">
-      <div class="about-text text-lg text-gray-800 leading-relaxed space-y-6">
-        <p class="about-intro text-xl font-medium">
-          Médico egresado de la <strong class="font-bold">Universidad de Cartagena</strong>, me destaco por mis habilidades clínicas y quirúrgicas, con gran capacidad de liderazgo y toma de decisiones.
-        </p>
-        <p>
-          Me identifico con la creatividad y la destreza en artes plásticas, comunicación asertiva, trabajo en equipo y excelente relación médico-paciente.
-        </p>
-        <p>
-          Me considero una persona <strong class="font-bold">proactiva, analítica y sociable</strong> con excelentes relaciones interpersonales. Tengo dominio del idioma inglés y experiencia en distintas áreas principalmente quirúrgicas con énfasis en cirugía plástica estética y reconstructiva.
-        </p>
-        <div class="about-highlights grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-          <div class="highlight-item bg-gray-50 p-6 rounded-2xl flex gap-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
-            <span class="text-4xl">🎓</span>
-            <div>
-              <h3 class="text-lg font-semibold mb-2 text-gray-900">Formación Académica</h3>
-              <p class="text-gray-600 text-sm">Universidad de Cartagena</p>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+      <!-- Imagen -->
+      <div class="relative order-2 lg:order-1">
+        <img src="/images/img2.jpeg" alt="Dr. Andrés Rivera - Experiencia" class="w-full rounded-3xl shadow-2xl object-cover aspect-[4/3]">
+        <div class="absolute -bottom-6 -left-6 bg-gradient-to-br from-primary to-purple-600 text-white p-6 rounded-2xl shadow-xl hidden lg:block">
+          <div class="text-3xl font-bold mb-1">Experiencia</div>
+          <div class="text-sm opacity-90">Internacional</div>
+        </div>
+      </div>
+
+      <!-- Contenido de texto -->
+      <div class="order-1 lg:order-2">
+        <div class="about-text text-lg text-gray-800 leading-relaxed space-y-6">
+          <p class="about-intro text-xl font-medium">
+            Médico egresado de la <strong class="font-bold text-primary">Universidad de Cartagena</strong>, me destaco por mis habilidades clínicas y quirúrgicas, con gran capacidad de liderazgo y toma de decisiones.
+          </p>
+          <p>
+            Me identifico con la creatividad y la destreza en artes plásticas, comunicación asertiva, trabajo en equipo y excelente relación médico-paciente.
+          </p>
+          <p>
+            Me considero una persona <strong class="font-bold text-primary">proactiva, analítica y sociable</strong> con excelentes relaciones interpersonales. Tengo dominio del idioma inglés y experiencia en distintas áreas principalmente quirúrgicas con énfasis en cirugía plástica estética y reconstructiva.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjetas de información -->
+    <div class="about-highlights grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+      <div class="highlight-item bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl flex gap-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg border border-blue-200">
+        <span class="text-4xl">🎓</span>
+        <div>
+          <h3 class="text-lg font-semibold mb-2 text-gray-900">Formación Académica</h3>
+          <p class="text-gray-600 text-sm">Universidad de Cartagena</p>
+          <p class="text-gray-500 text-xs mt-1">Médico Cirujano</p>
+        </div>
+      </div>
+      <div class="highlight-item bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-2xl flex gap-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg border border-purple-200">
+        <span class="text-4xl">🌍</span>
+        <div>
+          <h3 class="text-lg font-semibold mb-2 text-gray-900">Experiencia Internacional</h3>
+          <p class="text-gray-600 text-sm">Especialidades otorgadas en otro país</p>
+          <p class="text-gray-500 text-xs mt-1">Certificaciones internacionales</p>
+        </div>
+      </div>
+      <div class="highlight-item bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-2xl flex gap-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg border border-pink-200">
+        <span class="text-4xl">💬</span>
+        <div>
+          <h3 class="text-lg font-semibold mb-2 text-gray-900">Idiomas</h3>
+          <p class="text-gray-600 text-sm">Español e Inglés</p>
+          <p class="text-gray-500 text-xs mt-1">Comunicación fluida</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de valores y habilidades -->
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-3xl">
+        <h3 class="text-2xl font-bold mb-4 text-gray-900 flex items-center gap-3">
+          <span class="text-3xl">✨</span>
+          Mis Valores
+        </h3>
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start gap-3">
+            <span class="text-primary font-bold">•</span>
+            <span>Excelencia médica en cada procedimiento</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-primary font-bold">•</span>
+            <span>Compromiso con resultados naturales y armoniosos</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-primary font-bold">•</span>
+            <span>Relación cercana y empática con cada paciente</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-primary font-bold">•</span>
+            <span>Innovación constante en técnicas y procedimientos</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-gradient-to-br from-primary/5 to-purple-500/5 p-8 rounded-3xl">
+        <h3 class="text-2xl font-bold mb-4 text-gray-900 flex items-center gap-3">
+          <span class="text-3xl">🎯</span>
+          Mis Habilidades
+        </h3>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="text-gray-700 font-medium">Cirugía Estética</span>
+              <span class="text-primary font-bold">95%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-gradient-to-r from-primary to-purple-600 h-2 rounded-full" style="width: 95%"></div>
             </div>
           </div>
-          <div class="highlight-item bg-gray-50 p-6 rounded-2xl flex gap-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
-            <span class="text-4xl">🌍</span>
-            <div>
-              <h3 class="text-lg font-semibold mb-2 text-gray-900">Experiencia Internacional</h3>
-              <p class="text-gray-600 text-sm">Especialidades otorgadas en otro país</p>
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="text-gray-700 font-medium">Cirugía Reconstructiva</span>
+              <span class="text-primary font-bold">92%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-gradient-to-r from-primary to-purple-600 h-2 rounded-full" style="width: 92%"></div>
             </div>
           </div>
-          <div class="highlight-item bg-gray-50 p-6 rounded-2xl flex gap-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
-            <span class="text-4xl">💬</span>
-            <div>
-              <h3 class="text-lg font-semibold mb-2 text-gray-900">Idiomas</h3>
-              <p class="text-gray-600 text-sm">Español e Inglés</p>
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="text-gray-700 font-medium">Armonización Facial</span>
+              <span class="text-primary font-bold">98%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-gradient-to-r from-primary to-purple-600 h-2 rounded-full" style="width: 98%"></div>
             </div>
           </div>
         </div>

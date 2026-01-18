@@ -1,14 +1,67 @@
-<section id="especialidades" class="bg-gray-50 py-16 sm:py-24 scroll-mt-20">
+<section id="especialidades" class="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-24 scroll-mt-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="section-title text-4xl sm:text-5xl font-extrabold text-center mb-12 sm:mb-16 gradient-text">Especialidades</h2>
-    <div class="specialties-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+    <div class="text-center mb-12">
+      <h2 class="section-title text-4xl sm:text-5xl font-extrabold mb-4 gradient-text">Especialidades</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">Ofrezco una amplia gama de procedimientos especializados con técnicas avanzadas y resultados excepcionales</p>
+    </div>
+    
+    <div class="specialties-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
       @for (specialty of specialties; track specialty.title) {
-        <div class="specialty-card bg-white p-8 rounded-3xl text-center transition-all duration-300 shadow-sm hover:-translate-y-3 hover:shadow-xl">
-          <div class="text-5xl mb-6">{{ specialty.icon }}</div>
+        <div class="specialty-card bg-white p-8 rounded-3xl text-center transition-all duration-300 shadow-lg hover:-translate-y-3 hover:shadow-2xl border border-gray-100">
+          <div class="text-5xl mb-6 transform transition-transform duration-300 hover:scale-110">{{ specialty.icon }}</div>
           <h3 class="text-xl font-bold mb-4 text-gray-900">{{ specialty.title }}</h3>
-          <p class="text-gray-600 leading-relaxed">{{ specialty.description }}</p>
+          <p class="text-gray-600 leading-relaxed mb-4">{{ specialty.description }}</p>
+          <a href="#contacto" class="text-primary font-semibold text-sm hover:underline inline-flex items-center gap-2">
+            Más información
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
         </div>
       }
+    </div>
+
+    <!-- Galería de imágenes -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="relative group overflow-hidden rounded-3xl shadow-xl">
+        <img src="/images/img3.jpeg" alt="Procedimientos de cirugía plástica" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+          <div class="text-white">
+            <h4 class="text-2xl font-bold mb-2">Técnicas Avanzadas</h4>
+            <p class="text-sm opacity-90">Procedimientos con tecnología de vanguardia</p>
+          </div>
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-3xl shadow-xl">
+        <img src="/images/img4.jpeg" alt="Resultados de cirugía estética" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+          <div class="text-white">
+            <h4 class="text-2xl font-bold mb-2">Resultados Naturales</h4>
+            <p class="text-sm opacity-90">Enfoque en armonía y belleza natural</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Información adicional -->
+    <div class="mt-16 bg-gradient-to-br from-primary/10 to-purple-500/10 rounded-3xl p-8 md:p-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold text-primary mb-2">100%</div>
+          <div class="text-gray-700 font-medium">Seguridad</div>
+          <div class="text-sm text-gray-600 mt-1">Protocolos médicos estrictos</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-primary mb-2">24/7</div>
+          <div class="text-gray-700 font-medium">Seguimiento</div>
+          <div class="text-sm text-gray-600 mt-1">Atención post-operatoria</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-primary mb-2">100%</div>
+          <div class="text-gray-700 font-medium">Confidencialidad</div>
+          <div class="text-sm text-gray-600 mt-1">Privacidad garantizada</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
