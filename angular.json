@@ -43,7 +43,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/drarlanding/"
+              "baseHref": "/"
             },
             "development": {
               "optimization": false,
@@ -90,7 +90,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/drarlanding/"
+            "baseHref": "/"
           }
         }
       }
