@@ -1,21 +1,100 @@
-<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-    <div class="nav-brand">
-      <span class="text-xl font-bold gradient-text">Dr. Andrés Rivera</span>
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm w-full max-w-full overflow-x-hidden">
+  <nav class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-3 sm:py-4 flex justify-between items-center relative w-full">
+    <!-- Logo/Brand -->
+    <div class="nav-brand flex-shrink-0">
+      <span class="text-lg sm:text-xl font-bold gradient-text">Dr. Andrés Rivera</span>
     </div>
-    <ul class="hidden md:flex list-none gap-8 m-0 p-0">
-      <li><a href="#inicio" class="nav-link text-gray-800 font-medium no-underline relative transition-colors hover:text-primary">Inicio</a></li>
-      <li><a href="#sobre" class="nav-link text-gray-800 font-medium no-underline relative transition-colors hover:text-primary">Sobre Mí</a></li>
-      <li><a href="#especialidades" class="nav-link text-gray-800 font-medium no-underline relative transition-colors hover:text-primary">Especialidades</a></li>
-      <li><a href="#membresias" class="nav-link text-gray-800 font-medium no-underline relative transition-colors hover:text-primary">Membresías</a></li>
-      <li><a href="#contacto" class="nav-link text-gray-800 font-medium no-underline relative transition-colors hover:text-primary">Contacto</a></li>
+    
+    <!-- Menú Desktop -->
+    <ul class="hidden md:flex list-none gap-6 lg:gap-8 m-0 p-0">
+      <li><a href="#inicio" class="nav-link text-gray-800 font-medium no-underline relative transition-colors hover:text-primary text-sm lg:text-base">Inicio</a></li>
+      <li><a href="#sobre" class="nav-link text-gray-800 font-medium no-underline relative transition-colors hover:text-primary text-sm lg:text-base">Sobre Mí</a></li>
+      <li><a href="#especialidades" class="nav-link text-gray-800 font-medium no-underline relative transition-colors hover:text-primary text-sm lg:text-base">Especialidades</a></li>
+      <li><a href="#membresias" class="nav-link text-gray-800 font-medium no-underline relative transition-colors hover:text-primary text-sm lg:text-base">Membresías</a></li>
+      <li><a href="#contacto" class="nav-link text-gray-800 font-medium no-underline relative transition-colors hover:text-primary text-sm lg:text-base">Contacto</a></li>
     </ul>
-    <button class="md:hidden text-gray-800" aria-label="Menu">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
+    
+    <!-- Botón Menú Móvil -->
+    <button 
+      class="md:hidden text-gray-800 p-2 -mr-2 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg transition-all duration-300 z-50 hover:scale-110 active:scale-95"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen()"
+      aria-label="Menu"
+      type="button">
+      <div class="relative w-6 h-6">
+        @if (!isMenuOpen()) {
+          <svg class="w-6 h-6 absolute inset-0 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        } @else {
+          <svg class="w-6 h-6 absolute inset-0 transition-all duration-300 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        }
+      </div>
     </button>
   </nav>
+
+  <!-- Menú Móvil Desplegable - Siempre en el DOM para animaciones -->
+  <div class="mobile-menu md:hidden bg-white border-t border-gray-200 shadow-lg w-full overflow-hidden max-w-full">
+    <ul class="list-none m-0 p-0 flex flex-col w-full">
+      <li class="menu-item">
+        <a 
+          href="#inicio" 
+          (click)="closeMenu()"
+          class="block px-4 py-4 text-gray-800 font-medium no-underline transition-all duration-300 hover:bg-gradient-to-r hover:from-primary/10 hover:to-purple-500/10 hover:text-primary border-b border-gray-100 hover:pl-6">
+          <span class="flex items-center gap-3">
+            <span class="text-xl">🏠</span>
+            <span>Inicio</span>
+          </span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a 
+          href="#sobre" 
+          (click)="closeMenu()"
+          class="block px-4 py-4 text-gray-800 font-medium no-underline transition-all duration-300 hover:bg-gradient-to-r hover:from-primary/10 hover:to-purple-500/10 hover:text-primary border-b border-gray-100 hover:pl-6">
+          <span class="flex items-center gap-3">
+            <span class="text-xl">👤</span>
+            <span>Sobre Mí</span>
+          </span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a 
+          href="#especialidades" 
+          (click)="closeMenu()"
+          class="block px-4 py-4 text-gray-800 font-medium no-underline transition-all duration-300 hover:bg-gradient-to-r hover:from-primary/10 hover:to-purple-500/10 hover:text-primary border-b border-gray-100 hover:pl-6">
+          <span class="flex items-center gap-3">
+            <span class="text-xl">✨</span>
+            <span>Especialidades</span>
+          </span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a 
+          href="#membresias" 
+          (click)="closeMenu()"
+          class="block px-4 py-4 text-gray-800 font-medium no-underline transition-all duration-300 hover:bg-gradient-to-r hover:from-primary/10 hover:to-purple-500/10 hover:text-primary border-b border-gray-100 hover:pl-6">
+          <span class="flex items-center gap-3">
+            <span class="text-xl">🏆</span>
+            <span>Membresías</span>
+          </span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a 
+          href="#contacto" 
+          (click)="closeMenu()"
+          class="block px-4 py-4 text-gray-800 font-medium no-underline transition-all duration-300 hover:bg-gradient-to-r hover:from-primary/10 hover:to-purple-500/10 hover:text-primary hover:pl-6">
+          <span class="flex items-center gap-3">
+            <span class="text-xl">📧</span>
+            <span>Contacto</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </header>
 
 <style>
@@ -32,5 +111,36 @@
 
   .nav-link:hover::after {
     width: 100%;
+  }
+
+  .mobile-menu {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden !important;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .mobile-menu.menu-open {
+    pointer-events: auto;
+    overflow: hidden !important;
+  }
+
+  .mobile-menu ul {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .mobile-menu li {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .mobile-menu a {
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
   }
 </style>

@@ -1,30 +1,30 @@
-<section id="inicio" class="min-h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8 pt-24 pb-16 overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center z-10 relative">
+<section id="inicio" class="min-h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8 pt-24 pb-16 overflow-x-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 w-full max-w-full">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center z-10 relative w-full px-0">
     <!-- Contenido de texto -->
     <div class="text-center lg:text-left">
       <div class="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
         <span class="text-primary font-semibold text-sm">Médico Especialista Certificado</span>
       </div>
-      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-gray-900">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight mb-6 text-gray-900 break-words">
         <span class="title-line block">Dr. Andrés</span>
         <span class="title-line block gradient-text">Rivera Ariza</span>
       </h1>
-      <p class="hero-subtitle text-2xl sm:text-3xl lg:text-4xl text-primary font-semibold mb-4">Cirugía Plástica Estética y Reconstructiva</p>
-      <p class="hero-description text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl">Médico especializado con experiencia internacional en cirugía plástica, estética y reconstructiva. Transformando vidas con excelencia médica y resultados naturales.</p>
+      <p class="hero-subtitle text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-primary font-semibold mb-4 break-words">Cirugía Plástica Estética y Reconstructiva</p>
+      <p class="hero-description text-base sm:text-lg lg:text-xl text-gray-600 mb-8 max-w-2xl break-words">Médico especializado con experiencia internacional en cirugía plástica, estética y reconstructiva. Transformando vidas con excelencia médica y resultados naturales.</p>
       
       <!-- Estadísticas rápidas -->
-      <div class="grid grid-cols-3 gap-4 mb-8">
-        <div class="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-sm">
-          <div class="text-3xl font-bold text-primary">10+</div>
-          <div class="text-xs text-gray-600">Años Experiencia</div>
+      <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-8 w-full">
+        <div class="bg-white/80 backdrop-blur-sm p-3 sm:p-4 rounded-xl shadow-sm min-w-0">
+          <div class="text-2xl sm:text-3xl font-bold text-primary">10+</div>
+          <div class="text-xs text-gray-600 break-words">Años Experiencia</div>
         </div>
-        <div class="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-sm">
-          <div class="text-3xl font-bold text-primary">500+</div>
-          <div class="text-xs text-gray-600">Pacientes</div>
+        <div class="bg-white/80 backdrop-blur-sm p-3 sm:p-4 rounded-xl shadow-sm min-w-0">
+          <div class="text-2xl sm:text-3xl font-bold text-primary">500+</div>
+          <div class="text-xs text-gray-600 break-words">Pacientes</div>
         </div>
-        <div class="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-sm">
-          <div class="text-3xl font-bold text-primary">98%</div>
-          <div class="text-xs text-gray-600">Satisfacción</div>
+        <div class="bg-white/80 backdrop-blur-sm p-3 sm:p-4 rounded-xl shadow-sm min-w-0">
+          <div class="text-2xl sm:text-3xl font-bold text-primary">98%</div>
+          <div class="text-xs text-gray-600 break-words">Satisfacción</div>
         </div>
       </div>
 
@@ -35,23 +35,23 @@
     </div>
 
     <!-- Imagen del doctor -->
-    <div class="relative">
-      <div class="relative z-10">
-        <img src="images/img.jpeg" alt="Dr. Andrés Rivera Ariza" class="w-full max-w-lg mx-auto rounded-3xl shadow-2xl object-cover aspect-[3/4]">
-        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl z-20 hidden lg:block">
-          <div class="text-4xl font-bold text-primary mb-1">15+</div>
-          <div class="text-sm text-gray-600">Certificaciones</div>
+    <div class="relative w-full max-w-full overflow-hidden">
+      <div class="relative z-10 w-full">
+        <img src="images/img.jpeg" alt="Dr. Andrés Rivera Ariza" class="w-full max-w-full mx-auto rounded-3xl shadow-2xl object-cover aspect-[3/4]">
+        <div class="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-white p-4 sm:p-6 rounded-2xl shadow-xl z-20 hidden lg:block max-w-[calc(100%-1rem)]">
+          <div class="text-3xl sm:text-4xl font-bold text-primary mb-1">15+</div>
+          <div class="text-xs sm:text-sm text-gray-600">Certificaciones</div>
         </div>
       </div>
-      <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-3xl blur-3xl -z-10"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-3xl blur-3xl -z-10 max-w-full"></div>
     </div>
   </div>
 
   <!-- Elementos decorativos -->
-  <div class="absolute inset-0 z-0 pointer-events-none">
-    <div class="decoration-circle circle-1 absolute w-72 h-72 top-[10%] right-[10%] rounded-full opacity-10 bg-gradient-to-br from-purple-400 to-pink-400 animate-float"></div>
-    <div class="decoration-circle circle-2 absolute w-48 h-48 bottom-[20%] left-[15%] rounded-full opacity-10 bg-gradient-to-br from-blue-400 to-purple-400 animate-float-reverse"></div>
-    <div class="decoration-circle circle-3 absolute w-36 h-36 top-1/2 left-[5%] rounded-full opacity-10 bg-gradient-to-br from-pink-400 to-red-400 animate-float-slow"></div>
+  <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+    <div class="decoration-circle circle-1 absolute w-48 h-48 sm:w-72 sm:h-72 top-[10%] right-[-10%] sm:right-[10%] rounded-full opacity-10 bg-gradient-to-br from-purple-400 to-pink-400 animate-float"></div>
+    <div class="decoration-circle circle-2 absolute w-32 h-32 sm:w-48 sm:h-48 bottom-[20%] left-[-10%] sm:left-[15%] rounded-full opacity-10 bg-gradient-to-br from-blue-400 to-purple-400 animate-float-reverse"></div>
+    <div class="decoration-circle circle-3 absolute w-24 h-24 sm:w-36 sm:h-36 top-1/2 left-[-5%] sm:left-[5%] rounded-full opacity-10 bg-gradient-to-br from-pink-400 to-red-400 animate-float-slow"></div>
   </div>
 </section>
 

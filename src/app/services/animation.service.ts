@@ -256,12 +256,17 @@ export class AnimationService {
   animateHeader(): void {
     if (typeof window === 'undefined') return;
 
-    gsap.from('.header', {
-      y: -100,
-      opacity: 0,
-      duration: 1,
-      ease: 'power3.out'
-    });
+    setTimeout(() => {
+      const header = document.querySelector('app-header header');
+      if (!header) return;
+      
+      gsap.from(header, {
+        y: -100,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out'
+      });
+    }, 100);
   }
 
   /**
